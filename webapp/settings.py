@@ -1,7 +1,7 @@
 from pathlib import Path
 import datetime
 import os
-
+import dj_database_url
 #your app name -pname.User
 AUTH_USER_MODEL = "users.User"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -88,11 +88,13 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'yISBiYVvHcwkWdbAiqZqadhMpiqjlBod',
-        'HOST': 'viaduct.proxy.rlwy.net:39125',
-        'PORT': 39125,
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '39125',
     }}
 
-
+# DATABASES = {
+# 'default': dj_database_url.config(default="postgresql://postgres:yISBiYVvHcwkWdbAiqZqadhMpiqjlBod@viaduct.proxy.rlwy.net:39125/railway", conn_max_age=1000)
+# }
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
