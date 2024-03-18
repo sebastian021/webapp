@@ -3,7 +3,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from .serializers import RegisterSerializer,LoginSerializer,LogoutSerializer
-
+from rest_framework.decorators import api_view, permission_classes
+from django.views.decorators.csrf import csrf_protect
 # Create your views here.
 
 class RegisterView(generics.GenericAPIView):
@@ -16,6 +17,9 @@ class RegisterView(generics.GenericAPIView):
         user_data = serializer.data
         return Response(user_data, status=status.HTTP_201_CREATED)
 
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+@csrf_protect
 class LoginAPIView(generics.GenericAPIView):
     serializer_class = LoginSerializer
     def post(self,request):
