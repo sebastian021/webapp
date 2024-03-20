@@ -17,7 +17,9 @@ SECRET_KEY = 'django-insecure-^#)oa4najz#t985r3%(!t@%*ay)i41m!sl#17q!mh*u#!(pez3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://webapp-production-0912.up.railway.app/',
+                 '127.0.0.1',
+                 ]
 CSRF_TRUSTED_ORIGINS = ['https://webapp-production-0912.up.railway.app/']
 CORS_ORIGIN_WHITELIST = ['https://webapp-production-0912.up.railway.app/']
 
