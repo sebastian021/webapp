@@ -18,7 +18,8 @@ SECRET_KEY = 'django-insecure-^#)oa4najz#t985r3%(!t@%*ay)i41m!sl#17q!mh*u#!(pez3
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = ['https://webapp-production-0912.up.railway.app/']
+CORS_ORIGIN_WHITELIST = ['https://webapp-production-0912.up.railway.app/']
 
 # Application definition
 INSTALLED_APPS = [
