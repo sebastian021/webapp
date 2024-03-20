@@ -20,8 +20,13 @@ DEBUG = True
 ALLOWED_HOSTS = ['webapp-production-0912.up.railway.app',
                  '127.0.0.1',
                  ]
-CSRF_TRUSTED_ORIGINS = ['https://webapp-production-0912.up.railway.app/']
-CORS_ORIGIN_WHITELIST = ['https://webapp-production-0912.up.railway.app/']
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+   
+   
+
+# CSRF_TRUSTED_ORIGINS = ['https://webapp-production-0912.up.railway.app/']
+# CORS_ORIGIN_WHITELIST = ['https://webapp-production-0912.up.railway.app/']
 
 # Application definition
 INSTALLED_APPS = [
