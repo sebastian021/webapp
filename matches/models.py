@@ -22,7 +22,7 @@ class Match(models.Model):
     home_team_logo = models.URLField(max_length=250, null=True)
     home_team_winner = models.CharField(max_length=250, null=True)
     away_team_name = models.CharField(max_length=250, null=True)
-    away_team_logo = models.URLField(max_length=25, null=True)
+    away_team_logo = models.URLField(max_length=250, null=True)
     away_team_winner = models.CharField(max_length=250, null=True)
     home_team_goals = models.IntegerField(null=True)
     away_team_goals = models.IntegerField(null=True)

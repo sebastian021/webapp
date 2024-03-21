@@ -2,7 +2,7 @@ from .models import Match
 from rest_framework.decorators import api_view
 import requests
 import re
-from django.http import JsonResponse
+from rest_framework.response import Response
 from .serializers import MatchSerializer
 
 
@@ -72,4 +72,4 @@ def get_matches(request, date):
             filtered_matches.append(selected_match_data) 
     # Serialize the filtered matches and return a JSON response 
     serializer = MatchSerializer(filtered_matches, many=True)
-    return JsonResponse(serializer.data, safe=False)
+    return Response(serializer.data)
