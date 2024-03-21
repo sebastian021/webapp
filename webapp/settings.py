@@ -63,6 +63,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 # csrf secure settings
+CSRF_TRUSTED_ORIGINS = [
+    'https://webapp-production-0912.up.railway.app/',
+]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CORS_ORIGIN_WHITELIST = [
+    'https://webapp-production-0912.up.railway.app/',
+]
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = 'Strict'
