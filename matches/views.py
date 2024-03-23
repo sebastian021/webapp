@@ -8,7 +8,10 @@ from .serializers import MatchSerializer
 
 @api_view(['GET']) 
 def get_matches(request, date):
-    desired_league_ids = [39, 203, 9, 556, 495, 531]
+    desired_league_ids = [1, 2, 3, 4, 6, 7, 9, 15, 16, 17, 19, 23, 25, 137, 290, 301, 10, 18, 504, 5, 143, 
+                          21, 29, 30, 482, 31, 32, 33, 34, 37, 39, 45, 46, 48, 61, 78, 135, 140, 203, 495,
+                          528, 529, 531, 547, 556, 803, 804, 808, 
+                    ]
 
     # Use regex to extract the date from the URL
     pattern = r'\d{4}-\d{2}-\d{2}'
